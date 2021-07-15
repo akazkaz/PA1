@@ -41,7 +41,7 @@ void testprependNode(linkedListNode_t** table) {
  */
 int main() {
  linkedListNode_t* table[DEFAULT_SIZE];
-
+ memset(table,0,DEFAULT_SIZE*sizeof(linkedListNode_t*));
   fprintf( stderr, "Testing prependNode...\n\n" );
   testprependNode(table);
   fprintf( stderr, "\nDone running tests.\n" );

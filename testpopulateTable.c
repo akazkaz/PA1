@@ -14,7 +14,7 @@ void testpopulateTable(linkedListNode_t** table,FILE* datafile) {
 		printf("bucket %d\n",idx);
 		cur=table[idx];
 		while(cur!=NULL){
-			printf("%s",cur->value);
+			printf("%s ",cur->value);
 			cur=cur->next;
 		}
 		printf("\n");
@@ -40,11 +40,12 @@ int main(int argc, char* argv[]) {
  fprintf( stderr, "Testing populateTable...\n\n" );
 
  linkedListNode_t* table[DEFAULT_SIZE];
+memset(table,0,DEFAULT_SIZE*sizeof(linkedListNode_t*));
  FILE *fb=fopen(argv[1],"r");
  testpopulateTable(table,fb);
 
   
-  testpopulateTable(table,fb);
+
   fprintf( stderr, "\nDone running tests.\n" );
   fclose(fb);
   return 0;

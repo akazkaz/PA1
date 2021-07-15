@@ -8,7 +8,7 @@ void populateTable(linkedListNode_t** hashtbl, FILE* dataFile){
 	int i;
 			
 		while(fgets(str,30, dataFile)!=NULL){
-			llTableAddString(hashtbl,str);
+			
 			
 				ret=strchr(str,'\n');
 				if (ret!=NULL)
